@@ -1,7 +1,7 @@
 <p>Nome do cronometro</p>
-<input type="text">
+<input type="text" [(ngModel)]="nome">
 
-<p>tempo de espera</p>
-<input type="text">
+<p>Tempo de espera - em minutos</p>
+<input type="text" [(ngModel)]="tempEspera">
 
-<button>Adicionar</button>
+<button (click)='addCronometro()'>Adicionar</button>

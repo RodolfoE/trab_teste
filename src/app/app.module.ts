@@ -1,10 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Alarme } from './controller/alarme'
-import { AlarmeMod } from './model/alarme-mod'
-
-
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,21 +9,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  mAlarme:Alarme;
-
-  constructor(){
-    this.mAlarme = new Alarme();
-    this.mAlarme.addAlarm(new AlarmeMod(20000, 'Tomar Remédio'));
-  }
-
-  addCronometro(nome:string, tempo: number){
-    this.mAlarme.addAlarm(new AlarmeMod(tempo, nome));
-  }
+  
 
 }
