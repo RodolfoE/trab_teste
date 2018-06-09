@@ -1,7 +1,10 @@
+<h1>{{title}} M1 de Teste de Software</h1>
+<form id='alarm-form' [formGroup]='alarmForm' >
 <p>Nome do cronometro</p>
-<input type="text" [(ngModel)]="nome">
+<input type="text" [(ngModel)]="nome"  formControlName='nome'>
 
 <p>Tempo de espera - em minutos</p>
-<input type="text" [(ngModel)]="tempEspera">
+<input type="text" [(ngModel)]="tempEspera"  formControlName='tempEspera'>
 
 <button (click)='addCronometro()'>Adicionar</button>
+</form>
